@@ -244,6 +244,9 @@ dtb-$(CONFIG_ARCH_MXC) += \
 	imx6sx-sdb-m4.dtb \
 	imx6dqscm-1gb-evb-ldo.dtb \
 	imx6dqscm-2gb-evb-ldo.dtb \
+	imx6dqscm-1gb-evb-btwifi-ldo.dtb \
+	imx6dqscm-1gb-evb-enetirq-ldo.dtb \
+	imx6dqscm-1gb-evb-hdcp-ldo.dtb \
 	vf610-twr.dtb \
 	imx7d-12x12-lpddr3-arm2.dtb \
 	imx7d-12x12-ddr3-arm2.dtb \
