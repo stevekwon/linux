@@ -13,10 +13,10 @@
 /dts-v1/;
 
 #include "imx6q.dtsi"
-#include "imx6scm-freeX-rev1.dtsi"
+#include "imx6dqscm-qwks-rev1.dtsi"
 
 / {
-	model = "Freescale i.MX6D SCM FreedomX";
+	model = "Freescale i.MX6DQ SCM QWKS";
 	compatible = "fsl,imx6q";
 };
 
