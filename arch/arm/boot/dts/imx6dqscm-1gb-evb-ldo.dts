@@ -15,12 +15,10 @@
 / {
 	model = "Freescale i.MX6D SCM EVB";
 	compatible = "fsl,imx6q-sabresd", "fsl,imx6q";
-	soc {
-		busfreq {
-			status = "disabled";
-		};
-	};
+};
 
+&busfreq {
+        fsl,max_ddr_freq = <400000000>;
 };
 
 &ecspi1 {
