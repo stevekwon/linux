@@ -20,6 +20,11 @@
 		mxcfb3 = &mxcfb4;
 	};
 
+        soc {
+            busfreq {
+                status = "disabled";
+            };
+        };
 	hannstar_cabc {
 		compatible = "hannstar,cabc";
 
