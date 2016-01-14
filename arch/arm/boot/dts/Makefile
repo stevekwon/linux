@@ -253,6 +253,9 @@ dtb-$(CONFIG_ARCH_MXC) += \
 	imx6dqscm-1gb-qwks-rev1-ldo.dtb \
 	imx6dqscm-1gb-qwks-rev1-hdcp-ldo.dtb \
 	imx6dqscm-1gb-qwks-rev1-wifi-ldo.dtb \
+        imx6dqscm-1gb-qwks-rev2-ldo.dtb \
+        imx6dqscm-1gb-qwks-rev2-hdcp-ldo.dtb \
+        imx6dqscm-1gb-qwks-rev2-wifi-ldo.dtb \
 	vf610-twr.dtb \
 	imx7d-12x12-lpddr3-arm2.dtb \
 	imx7d-12x12-ddr3-arm2.dtb \
