@@ -1,2 +1,2 @@
-obj-y		+= vtl_ts.o ct365.o
+obj-y		+= vtl_ts.o 
 

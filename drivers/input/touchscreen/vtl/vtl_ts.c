@@ -42,7 +42,6 @@
 //extern struct ctp_config_info config_info;//allwiner
 
 #include "vtl_ts.h"
-#include "ct365.h"
 
 #define MIN_X		0x00
 #define MIN_Y		0x00
@@ -260,7 +259,6 @@ int vtl_ts_suspend(struct i2c_client *client, pm_message_t mesg)
 
 	disable_irq(ts->config_info.irq_number);
 	cancel_work_sync(&ts->driver->event_work);
-	ct36x_chip_go_sleep(client);
 
 	return 0;
 }
