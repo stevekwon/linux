@@ -55,7 +55,7 @@ periph_clk_switch5:
 
 set_ahb_podf_before_switch1:
 	/*
-	 * set the MMDC_DIV=1, AXI_DIV = 2, AHB_DIV=4,
+	 * set the MMDC_DIV=1, AXI_DIV=3, AHB_DIV=3,
 	 */
 	ldr	r9, [r2, #CCM_CBCDR]
 	ldr	r6, =0x3f1f00
@@ -79,7 +79,8 @@ switch_pre_periph_clk_400:
 
 	/* now switch periph_clk back. */
 	ldr	r9, [r2, #CCM_CBCDR]
-	bic	r9, r9, #(1 << 25)
+	bic	r9, r9, #(1 << 25) 		/* switch periph_clk_sel to pll2 source */
+	orr r9, r9, #(1 << 6) 		/* switch axi_sel to axi_alt_sel */
 	str	r9, [r2, #CCM_CBCDR]
 
 periph_clk_switch6:
@@ -108,7 +109,8 @@ periph_clk_switch6:
 
 	/* now switch periph_clk to 24MHz. */
 	ldr	r9, [r2, #CCM_CBCDR]
-	orr	r9, r9, #(1 << 25)
+	orr	r9, r9, #(1 << 25) 		/* switch periph_clk_sel to 24MHz */
+	bic r9, r9, #(1 << 6) 		/* switch axi_sel to peiph_clk */
 	str	r9, [r2, #CCM_CBCDR]
 
 periph_clk_switch1:
