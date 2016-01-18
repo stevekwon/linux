@@ -289,7 +289,7 @@
 	};
 
  	touchscreen@01 {
-                compatible = "vtl";
+                compatible = "vtl,ct365";
                 reg = <0x01>;
 		interrupt-parent = <&gpio6>;
 		interrupts = <14 0>;
