@@ -13,9 +13,21 @@
  */
 
 / {
-	bcmdhd_wlan_0: bcmdhd_wlan@0 {
-		compatible = "android,bcmdhd_wlan";
-	};
+        regulators {
+                wlreg_on: fixedregulator@100 {
+                        compatible = "regulator-fixed";
+                        regulator-min-microvolt = <5000000>;
+                        regulator-max-microvolt = <5000000>;
+                        regulator-name = "wlreg_on";
+			regulator-boot-on;
+                        regulator-always-on;
+                };
+        };
+
+        bcmdhd_wlan_0: bcmdhd_wlan@0 {
+                compatible = "android,bcmdhd_wlan";
+                wlreg_on-supply = <&wlreg_on>;
+        };
 };
 
 &iomuxc {
