@@ -6,5 +6,5 @@
  * published by the Free Software Foundation.
  */
 
-#include "imx6dqscm-1gb-evb-ldo.dts"
-#include "imx6qdl-sabresd-btwifi.dtsi"
+#include "imx6dqscm-1gb-qwks-rev2-interleave-ldo.dts"
+#include "imx6dqscm-qwks-rev1-wifi.dtsi"

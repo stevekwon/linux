@@ -10,12 +10,6 @@
  * http://www.gnu.org/copyleft/gpl.html
  */
 
-#include "imx6dqscm-1gb-evb-btwifi-ldo.dts"
-
-/ {
-	memory: memory {
-		reg = <0x10000000 0x80000000>;
-	};
-
-};
+#include "imx6dqscm-1gb-evb-fix-ldo.dts"
+#include "imx6dqscm-2gb-fix.dtsi"
 

@@ -6,7 +6,7 @@
  * published by the Free Software Foundation.
  */
 
-#include "imx6dqscm-1gb-evb-ldo.dts"
+#include "imx6dqscm-1gb-evb-interleave-ldo.dts"
 
 &fec {
 	pinctrl-0 = <&pinctrl_enet &pinctrl_enet_irq>;

@@ -10,11 +10,9 @@
  * http://www.gnu.org/copyleft/gpl.html
  */
 
-#include "imx6dqscm-1gb-evb-enetirq-ldo.dts"
-
 / {
 	memory: memory {
-		reg = <0x10000000 0x80000000>;
+		reg = <0x10000000 0x40000000>;
 	};
 
 };
