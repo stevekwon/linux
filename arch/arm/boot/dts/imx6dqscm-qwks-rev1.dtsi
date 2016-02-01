@@ -443,7 +443,7 @@
 
 &dcic2 {
 	dcic_id = <1>;
-	dcic_mux = "dcic-lvds1";
+	dcic_mux = "dcic-lvds0";
 	status = "okay";
 };
 
