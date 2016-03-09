@@ -45,8 +45,29 @@
 				MX6QDL_PAD_DISP0_DAT9__GPIO4_IO30	0x13069
 			>;
 		};
+		pinctrl_uart2: uart2grp {
+			fsl,pins = <
+				MX6QDL_PAD_EIM_D26__UART2_TX_DATA	0x1b0b1
+				MX6QDL_PAD_EIM_D27__UART2_RX_DATA	0x1b0b1
+				MX6QDL_PAD_EIM_D28__UART2_CTS_B         0x1b0b1
+				MX6QDL_PAD_EIM_D29__UART2_RTS_B		0x1b0b1
+				MX6QDL_PAD_ENET_REF_CLK__GPIO1_IO23 	0x13069
+			>;
+		};
+
 	};
 };
+
+&uart2 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_uart2>;
+	fsl,uart-has-rtscts;
+	status = "okay";
+	/* for DTE mode, add below change */
+	/* fsl,dte-mode; */
+	/*pinctrl-0 = <&pinctrl_uart2dte>; */
+};
+
 
 &usdhc2 {
 	pinctrl-names = "default";
