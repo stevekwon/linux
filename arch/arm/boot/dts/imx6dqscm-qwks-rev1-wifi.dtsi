@@ -47,11 +47,19 @@
 		};
 		pinctrl_uart2: uart2grp {
 			fsl,pins = <
-				MX6QDL_PAD_EIM_D26__UART2_TX_DATA	0x1b0b1
-				MX6QDL_PAD_EIM_D27__UART2_RX_DATA	0x1b0b1
+				MX6QDL_PAD_EIM_D26__UART2_TX_DATA	0x1f0b1
+				MX6QDL_PAD_EIM_D27__UART2_RX_DATA	0x1f0b1
 				MX6QDL_PAD_EIM_D28__UART2_CTS_B         0x1b0b1
 				MX6QDL_PAD_EIM_D29__UART2_RTS_B		0x1b0b1
 				MX6QDL_PAD_ENET_REF_CLK__GPIO1_IO23 	0x13069
+			>;
+		};
+		pinctrl_uart5_1: uart5grp-1 {
+			fsl,pins = <
+				MX6QDL_PAD_KEY_COL1__UART5_TX_DATA	0x1b0b1
+				MX6QDL_PAD_KEY_ROW1__UART5_RX_DATA	0x1b0b1
+				MX6QDL_PAD_KEY_COL4__UART5_RTS_B	0x1b0b1
+				MX6QDL_PAD_KEY_ROW4__UART5_CTS_B	0x1b0b1
 			>;
 		};
 
@@ -68,6 +76,15 @@
 	/*pinctrl-0 = <&pinctrl_uart2dte>; */
 };
 
+&uart5 {
+        pinctrl-names = "default";
+        pinctrl-0 = <&pinctrl_uart5_1>;
+        fsl,uart-has-rtscts;
+        status = "okay";
+        /* for DTE mode, add below change */
+        /* fsl,dte-mode; */
+        /* pinctrl-0 = <&pinctrl_uart5dte_1>; */
+};
 
 &usdhc2 {
 	pinctrl-names = "default";
